@@ -47,9 +47,7 @@ export default class Carousel {
     this.elem.onclick = ({target}) => {
       let button = target.closest('.carousel__button');
       if (button) {
-        console.log('target', button)
         let id = target.closest('[data-id]').dataset.id;
-        console.log('target', target.closest('[data-id]'))
         this.elem.dispatchEvent(new CustomEvent('product-add', {
           detail: id,
           bubbles: true
