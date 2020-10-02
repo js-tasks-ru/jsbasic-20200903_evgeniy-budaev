@@ -30,15 +30,12 @@ export default class ProductCard {
   }
 
   addCard() {
-    document.addEventListener('DOMContentLoaded', () => {
-        this.elem.addEventListener('click', () => {
-            this.elem.dispatchEvent(new CustomEvent("product-add", {
-                detail: this._product.id,
-                bubbles: true
-            }));
-        });
-
+    this.elem.addEventListener('click', () => {
+        this.elem.dispatchEvent(new CustomEvent("product-add", {
+            detail: this.product.id,
+            bubbles: true
+        }));
     });
-}
+  }
 
 }
